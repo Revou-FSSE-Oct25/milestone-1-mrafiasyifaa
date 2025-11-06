@@ -3,9 +3,9 @@
 This repo is dedicated to house the source-code of my own personal portfolia and digital branding. The purpose of this
 website is to share who am I and what I've been working on.
 
-**[Kunjungi Live Demo di Sini](https://mrafiasyifaa.github.io/portfolio/)**
+**[Click Me to Visit My Site](https://revou-fsse-oct25.github.io/milestone-1-mrafiasyifaa/)**
 
-![Frontpage View](image-1.png)
+![Frontpage View](assets/images/image-1.png)
 ---
 ## Website Main Features
 
