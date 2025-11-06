@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syifaa | Fullstack Developer</title>
+
+    <meta name="author" content="Muhammad Rafi A Syifaa, Fullstack Developer">
+    <meta name="description" content="Showcasing Muhammad Rafi A Syifaa's professional
+    work in Software Engineering field. Explore his projects, skills, and contact details.">
+    <meta name="keywords" content="Muhammad Rafi A Syifaa, fullstack developer, web
+    developer, frontend, backend, design, HTML, CSS, JavaScript, Portfolio, Personal Website">
+</head>
+
+<body style="margin: 0; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; background: #ffffff; color: #000000; scroll-behavior: smooth;">
+
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 15px 50px;
+        background: rgba(255, 255, 255, 0.5); color: #000; backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+
+        <!-- Kiri -->
+        <div>
+            <div style="font-weight: 400; font-size: 1.8rem; letter-spacing: 1px;">M. Rafi A Syifaa </div>
+            <hr style="width: 40px; border: none; border-top: 2px solid #555; margin: 4px 0;">
+            <div style="font-size: 0.75rem; letter-spacing: 2px; color: rgba(0,0,0,0.7); text-transform: uppercase;">
+            Backend Specialist · Designer · Indie Game Developer
+            </div>
+        </div>
+  
+        <!-- Kanan -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <select name="language" id="language"
+            style="background: rgba(255,255,255,0.6); border: 1px solid rgba(0,0,0,0.3); color: #000; 
+            padding: 5px 10px; border-radius: 4px; cursor: pointer;">
+                <option value="en">English</option>
+                <option value="id">Bahasa Indonesia</option>
+            </select>
+    
+            <button id="musicBtn"
+            style="background: rgba(255,255,255,0.6); border: 1px solid rgba(0,0,0,0.3); color: #000;
+            font-size: 1rem; padding: 5px 10px; border-radius: 50%; cursor: pointer; transition: 0.3s;">
+            ⏸
+            </button>
+        </div>
+    </header>
+
+  <!-- NAVIGATION PANEL -->
+  <nav style="display: flex; justify-content: center; gap: 40px; 
+  background: rgba(255,255,255,0.4); backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.1); padding: 12px 0; position: sticky; top: 80px; z-index: 999;">
+
+    <a href="#home" style="text-decoration: none; color: #000; font-weight: 500; letter-spacing: 1px; transition: 0.3s;"
+       onmouseover="this.style.opacity='0.1'" onmouseout="this.style.opacity='1'">Home</a>
+
+    <a href="#about" style="text-decoration: none; color: #000; font-weight: 500; letter-spacing: 1px; transition: 0.3s;"
+       onmouseover="this.style.opacity='0.1'" onmouseout="this.style.opacity='1'">About</a>
+
+    <a href="#projects" style="text-decoration: none; color: #000; font-weight: 500; letter-spacing: 1px; transition: 0.3s;"
+       onmouseover="this.style.opacity='0.1'" onmouseout="this.style.opacity='1'">Projects</a>
+
+    <a href="#contact" style="text-decoration: none; color: #000; font-weight: 500; letter-spacing: 1px; transition: 0.3s;"
+       onmouseover="this.style.opacity='0.1'" onmouseout="this.style.opacity='1'">Contact</a>
+  </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+    <section id="home" 
+        style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; 
+        align-items: center; text-align: center; padding: 50px; background: #fff; gap: 40px;">
+
+        <!-- Foto -->
+        <div>
+        <figure style="margin: 0;">
+            <img src="assets/images/Syifaa_Casual.jpg" alt="Photo of Syifaa in Silly Pose" 
+                style="width: 600px; height: 600px; object-fit: cover; border-radius: 50%;
+                box-shadow: 0 4px 25px rgba(0,0,0,0.2);">
+                <figcaption style="font-size: 0.9rem; color: rgba(0,0,0,0.5); margin-top: 10px;">
+                Syifaa in Casual Laboratory Coat — Embracing the Future
+                </figcaption>
+        </figure>
+        </div>
+
+        <!-- Teks -->
+        <div style="max-width: 600px;">
+            <h1 style="font-size: 3rem; margin-bottom: 15px; font-weight: 300;">
+                 Hello, I'm <span style="font-weight: 700; color: #20313F">Syifaa</span>
+            </h1>
+            <p style="font-size: 1.15rem; line-height: 1.6; color: rgba(0,0,0,0.8);">
+                An experienced <b style="color: #20313F;">backend developer</b> who strives to bridge real-world problems 
+                with innovative and reliable software solutions.
+            </p>
+        </div>
+
+        <!-- Musik -->
+                <div style="margin-top: 10px; width: 750px; max-width: 90%;">
+                    <p style="font-size: 1rem; margin-bottom: 20px; color: rgba(0,0,0,0.7);">
+                        While we're getting to know each other, why don't we listen to state-of-the-art music? 🎵
+                    </p>
+
+                <div id="playlistToggle" 
+                     onclick="togglePlaylist()"
+                     style="background: #f4f4f4; border: 1px solid rgba(0,0,0,0.1); padding: 12px 20px;
+                            border-radius: 8px; cursor: pointer; display: flex; 
+                            justify-content: space-between; align-items: center;
+                            font-size: 1.2rem; font-weight: 500; transition: 0.2s;"
+                     onmouseover="this.style.background='#e9e9e9'" 
+                     onmouseout="this.style.background='#f4f4f4'">
+                    <span>Playlist</span>
+                    <span id="playlistArrow">▼</span>
+                </div>
+
+                <div id="playlistContent" style="display: none; margin-top: -1px;">
+                    <table style="border-collapse: collapse; width: 100%; table-layout: fixed;
+                                  background: rgba(255,255,255,0.8); backdrop-filter: blur(6px);
+                                  border: 1px solid rgba(0,0,0,0.1); 
+                                  border-radius: 0 0 12px 12px; /* Hanya sudut bawah */
+                                  box-shadow: 0 2px 12px rgba(0,0,0,0.05); text-align: center;
+                                  border-top: none;">
+                        <thead>
+                            <tr>
+                                <th style="padding: 14px; font-size: 1.2rem; color: #333; border-bottom: 1px solid rgba(0,0,0,0.1); width: 50%;">
+                                Relaxing 🎧
+                                </th>
+                                <th style="padding: 14px; font-size: 1.2rem; color: #333; border-bottom: 1px solid rgba(0,0,0,0.1); width: 50%;">
+                                Adventurous ⚡
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 10px 5px;"><span onclick="playMusic('assets/audios/relaxing_1.mp3')" 
+                                    style="cursor: pointer; color: #0077cc;">Silence's Treasure</span></td>
+                                <td style="padding: 10px 5px;"><span onclick="playMusic('assets/audios/adventurous_1.mp3')" 
+                                    style="cursor: pointer; color: #0077cc;">Interlude in the Adventure</span></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 5px;"><span onclick="playMusic('assets/audios/relaxing_2.mp3')" 
+                                    style="cursor: pointer; color: #0077cc;">Glimmer of Dawn</span></td>
+                                <td style="padding: 10px 5px;"><span onclick="playMusic('assets/audios/adventurous_2.mp3')" 
+                                    style="cursor: pointer; color: #0077cc;">Where Glory Shines</span></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 5px;"><span onclick="playMusic('assets/audios/relaxing_3.mp3')" 
+                                    style="cursor: pointer; color: #0077cc;">Seed of Purity</span></td>
+                                <td style="padding: 10px 5px;"><span onclick="playMusic('assets/audios/adventurous_3.mp3')" 
+                                    style="cursor: pointer; color: #0077cc;">Moonlit Solitude (Instrumental)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <audio id="musicPlayer" style="display:none;"></audio>
+            </div>
+    </section>
+
+    <!--ABOUT-->
+    <section id="about" style="display: flex; align-items: center; justify-content: space-between; padding: 80px 50px; background: #00000008; gap: 40px;">
+
+        <div style="flex: 1; max-width: 55%;">
+            <h2 style="font-size: 2rem; color: #20313F;">About Me</h2>
+            <p style="max-width: 700px; line-height: 1.7; text-align: justify;">
+                As a computer engineering student at Telkom University of Bandung, I have developed a strong foundation in hardware,
+                network, computer architecture, and cloud computing. However, throughout my studies, I found myself curiously drawn
+                to software development. This transition has led me to explore various programming languages and frameworks. <br>
+
+                <br>I've been involved in several projects, ranging from web application for goverment institutions to tackling
+                confidential data of hospital management information systems. These experiences have honed my skills in backend development,
+                database management, and API integration. I'm familiar with technologies such as Django, Flask, Node.js, and SQL databases.
+                Join me in my journey as I set out to become a <b>Fullstack Developer</b>  and contribute to the tech ecosystems. 
+            </p>
+            <ul style="line-height: 1.6;">
+                <li><b>Languages: </b>Indonesian (Native), English (European CEFR of B2)</li>
+                <li><b>Interests: </b>Artificial Intelligence, Game Development, Machine Learning, Software Engineering</li>
+            </ul>
+        </div>
+
+        <figure style="text-align:center;">
+            <img src="assets/images/Syifaa_Proud.jpg" alt="Photo of Syifaa in Formal Pose" 
+                style="width:100%;max-width:400px;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.15);">
+            <figcaption style="font-size:0.9rem;color:rgba(0,0,0,0.5);margin-top:10px;">
+                Syifaa in Casual Laboratory Coat — proud and inspired moment.
+            </figcaption>
+        </figure>
+
+    </section>
+
+     <!-- PROJECTS -->
+    <!-- PROJECTS -->
+    <section id="projects" style="padding: 80px 50px; background: #ffffff;">
+
+    <h2 style="font-size: 2.5rem; font-weight: 700; margin-top: 0; margin-bottom: 40px; color: #20313F;">Projects</h2>
+
+    <!-- PROJECTS DONE -->
+    <div>
+        <h3 style="font-size: 1.8rem; font-weight: 600; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 30px;">
+        Projects that I've Done
+        </h3>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 25px;">
+
+        <article style="flex: 1 1 300px;">
+            <figure style="background: #f0f0f0; height: 250px; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center;
+            justify-content: center; overflow: hidden;">
+            <img src="assets/images/Projects_Govtech.jpg" alt="Screenshot of DISBUDPORA Portal to the afromentioned system" style="width: 100%; height: 100%; object-fit: cover;">
+            </figure>
+            <h4 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 5px 0;">Archive System</h4>
+            <p style="font-size: 0.9rem; color: #333; line-height: 1.5; margin: 0 0 15px 0;">
+            A mail disposition and archiving system for Department of Youth, Sports, and Culture of Sukabumi City.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #777;">
+            <span>#Govtech</span>
+            <span>June - August 2025</span>
+            </div>
+            <div style="text-align: right; margin-top: 10px;">
+                <a href="pages/project_details.html" 
+                style="text-decoration: none; color: #555; font-weight: 500; font-size: 0.9rem;"
+                onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">
+                Learn more about this project →
+                </a>
+            </div>
+        </article>
+
+        <article style="flex: 1 1 300px;">
+            <figure style="background: #f0f0f0; height: 250px; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center;
+            justify-content: center; overflow: hidden;">
+            <img src="assets/images/Projects_MIS.jpg" alt="Screenshot of IGD Hermina Pasteur Portal to afromentioned system" style="width: 100%; height: 100%; object-fit: cover;">
+            </figure>
+            <h4 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 5px 0;">ED Dashboard</h4>
+            <p style="font-size: 0.9rem; color: #333; line-height: 1.5; margin: 0 0 15px 0;">
+            A MIS for Emergency Department of Hermina Pasteur Hospital to manage patient data and medrecs.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #777;">
+            <span>#Healthcare</span>
+            <span>Sep 2025 - March 2026</span>
+            </div>
+            <div style="text-align: right; margin-top: 10px;">
+                <a href="pages/project_details.html" 
+                style="text-decoration: none; color: #555; font-weight: 500; font-size: 0.9rem;"
+                onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">
+                Learn more about this project →
+                </a>
+            </div>
+        </article>
+
+        <!--Nambah Project di sini nanti-->
+        <article style="flex: 1 1 300px;">
+            <figure style="background: #f0f0f0; height: 250px; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center;
+            justify-content: center; overflow: hidden; font-weight: bold; color: #aaa;">
+            <span>[COMING SOON]</span>
+            </figure>
+            <h4 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 5px 0;">More Projects Will Be Showcased!</h4>
+            <p style="font-size: 0.9rem; color: #333; line-height: 1.5; margin: 0 0 15px 0;">
+            Details are to be announced. Stay tuned for updates on this exciting project!
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #777;">
+            <span>#JourneyWithMe</span>
+            <span>Dates are to be announced</span>
+            </div>
+        </article>
+
+        </div>
+    </div>
+
+    <!-- ===== FUTURE PROJECTS ===== -->
+    <div style="margin-top: 60px;">
+        <h3 style="font-size: 1.8rem; font-weight: 600; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 30px;">
+        Future Projects
+        </h3>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 25px;">
+        <article style="flex: 1 1 300px;">
+            <figure style="background: #f0f0f0; height: 250px; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center;
+            justify-content: center; overflow: hidden; font-weight: bold; color: #aaa; opacity: 0.6;">
+            <span>[COMING SOON]</span>
+            </figure>
+            <h4 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 5px 0;">More Projects Will Be Showcased!</h4>
+            <p style="font-size: 0.9rem; color: #333; line-height: 1.5; margin: 0 0 15px 0;">
+            Details are to be announced. Stay tuned for updates on this exciting project!
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #777;">
+            <span>#JourneyWithMe</span>
+            <span>Dates are to be announced</span>
+            </div>
+        </article>
+
+        <article style="flex: 1 1 300px;">
+            <figure style="background: #f0f0f0; height: 250px; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center;
+            justify-content: center; overflow: hidden; font-weight: bold; color: #aaa; opacity: 0.6;">
+            <span>[COMING SOON]</span>
+            </figure>
+            <h4 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 5px 0;">More Projects Will Be Showcased!</h4>
+            <p style="font-size: 0.9rem; color: #333; line-height: 1.5; margin: 0 0 15px 0;">
+            Details are to be announced. Stay tuned for updates on this exciting project!
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #777;">
+            <span>#JourneyWithMe</span>
+            <span>Dates are to be announced</span>
+            </div>
+        </article>
+
+        <article style="flex: 1 1 300px;">
+            <figure style="background: #f0f0f0; height: 250px; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center;
+            justify-content: center; overflow: hidden; font-weight: bold; color: #aaa; opacity: 0.6;">
+            <span>[COMING SOON]</span>
+            </figure>
+            <h4 style="font-size: 1.2rem; font-weight: 600; margin: 0 0 5px 0;">More Projects Will Be Showcased!</h4>
+            <p style="font-size: 0.9rem; color: #333; line-height: 1.5; margin: 0 0 15px 0;">
+            Details are to be announced. Stay tuned for updates on this exciting project!
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #777;">
+            <span>#JourneyWithMe</span>
+            <span>Dates are to be announced</span>
+            </div>
+        </article>
+        </div>
+    </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" style="padding: 80px 50px; background: rgba(0,0,0,0.03); text-align: center;">
+
+        <header style="margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; margin-top: 0; margin-bottom: 20px;     color: #20313F;">Contact</h2>
+            <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">
+                Let's connect! Fill out the form below to reach me, whether it's for work or
+                hanging out <br>I'll get back to you as soon as possible.
+            </p>
+        </header>
+
+        <form id="contact-form" style="max-width: 700px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; gap: 15px; text-align: left;">
+            <fieldset style="border: none; padding: 0; display: flex; flex-direction: column; gap: 15px;">
+                
+                <div>
+                    <label for="name" style="font-weight: 500; font-size: 0.9rem; margin-bottom: 5px; display: block;">Name:</label>
+                    <input id="name" type="text" placeholder="Your name" required
+                        style="width: 100%; padding: 12px; border: 1px solid #ddd; background: #fff; border-radius: 8px; box-sizing: border-box; font-family:
+                        'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1rem;">
+                </div>
+
+                <div>
+                    <label for="email" style="font-weight: 500; font-size: 0.9rem; margin-bottom: 5px; display: block;">Email:</label>
+                    <input id="email" type="email" placeholder="Your email" required
+                        style="width: 100%; padding: 12px; border: 1px solid #ddd; background: #fff; border-radius: 8px; box-sizing: border-box; font-family:
+                        'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1rem;">
+                </div>
+
+                <div>
+                    <label for="message" style="font-weight: 500; font-size: 0.9rem; margin-bottom: 5px; display: block;">Message:</label>
+                    <textarea id="message" placeholder="Write your message..." rows="5" required
+                            style="width: 100%; padding: 12px; border: 1px solid #ddd; background: #fff; border-radius: 8px; resize: vertical; box-sizing: border-box;
+                            font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1rem;"></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit" 
+                    style="padding: 12px 20px; border: none; border-radius: 8px;
+                        background: rgba(0,0,0,0.8); color: #fff; cursor: pointer;
+                        font-weight: bold; font-size: 1rem; transition: background 0.3s;"
+                    onmouseover="this.style.background='#3a5a70'" onmouseout="this.style.background='#20313F';">
+                Send Message
+            </button>
+
+            <p id="form-status" style="color: green; display: none; text-align: center;">Message sent successfully!</p>
+        </form>
+    </section>
+
+</main>
+
+<footer style="text-align: center; padding: 20px; background: rgba(255,255,255,0.5); color: #000; 
+    border-top: 1px solid rgba(0,0,0,0.1); margin-top: 40px;">
+    
+    <!-- Copyright -->
+    <p style="margin: 0; font-size: 0.9rem; color: rgba(0,0,0,0.6);">
+        &copy; 2025 Muhammad Rafi A Syifaa. All rights reserved.
+    </p>
+
+    <!-- Social Icons -->
+    <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px; align-items: center;">
+        <a href="https://github.com/mrafiasyifaa" target="_blank" style="display: inline-block;">
+            <img src="assets/logos/github_logo_black.png" alt="GitHub" 
+                 style="width: 28px; height: 28px; opacity: 0.8; transition: opacity 0.3s;">
+        </a>
+
+        <a href="https://linkedin.com/in/mrafiasyifaa" target="_blank" style="display: inline-block;">
+            <img src="assets/logos/linkedin_logo.png" alt="LinkedIn" 
+                 style="width: 28px; height: 28px; opacity: 0.8; transition: opacity 0.3s;">
+        </a>
+
+        <a href="https://wa.me/6281390406077" target="_blank" style="display: inline-block;">
+            <img src="assets/logos/whatsapp_logo.png" alt="WhatsApp" 
+                 style="width: 28px; height: 28px; opacity: 0.8; transition: opacity 0.3s;">
+        </a>
+    </div>
+</footer>
+
+<script>
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        status.style.display = "block";
+        form.reset();
+        setTimeout(() => status.style.display = "none", 3000);
+    });
+
+</script>
+
+<!-- Script Musik -->
+<script>
+  const player = document.getElementById("musicPlayer");
+  const musicBtn = document.getElementById("musicBtn");
+  let isPlaying = false;
+
+  window.addEventListener('DOMContentLoaded', () => {
+    player.src = 'assets/audios/relaxing_1.mp3';
+  });
+
+  // Tombol Play/Pause
+  musicBtn.addEventListener('click', () => {
+    if (player.paused) {
+      player.play().then(() => {
+        musicBtn.textContent = '⏸';
+        isPlaying = true;
+      }).catch(err => console.log("Autoplay prevented:", err));
+    } else {
+      player.pause();
+      musicBtn.textContent = '▶';
+      isPlaying = false;
+    }
+  });
+
+  //Ganti Musik lewat Tabel
+  function playMusic(src) {
+    player.src = src;
+    player.play().then(() => {
+      musicBtn.textContent = '⏸';
+      isPlaying = true;
+    }).catch(err => console.log("Autoplay prevented:", err));
+  }
+
+  //Pita Playlist
+    function togglePlaylist() {
+        const content = document.getElementById('playlistContent');
+        const arrow = document.getElementById('playlistArrow');
+
+        // Periksa kondisi tampilan saat ini
+        if (content.style.display === 'none' || content.style.display === '') {
+            // Jika tersembunyi, tampilkan
+            content.style.display = 'block';
+            arrow.textContent = '▲'; // Ubah panah ke atas
+        } else {
+            // Jika tampil, sembunyikan
+            content.style.display = 'none';
+            arrow.textContent = '▼'; // Ubah panah ke bawah
+        }
+    }
+</script>
+</html>
