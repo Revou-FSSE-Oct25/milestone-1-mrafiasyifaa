@@ -6,67 +6,64 @@ The purpose of this website is to serve as a digital resume, project gallery, an
 
 **[Visit the Live Site Here](https://revou-fsse-oct25.github.io/milestone-1-mrafiasyifaa/)**
 
-![Frontpage View](assets/images/image-1.png)
+![Frontpage View](assets/images/Website_Overview.png)
+---
+![Mobile View](assets/images/Website_Overview_Mobile.png)
 
 ---
 
 ## 🚀 Overview
 
-As a developer, building a digital presence is key. This website is my first step in creating a professional platform to:
+As a developer, building a digital presence is key. This website represents my professional platform to:
 * **Showcase Projects:** Document and exhibit my technical work in the Software Engineering field.
 * **Share My Story:** Provide context about my background, skills, and professional interests.
 * **Be a Point of Contact:** Make it easy for anyone to connect with me via the contact form or social media.
 
 ---
 
-## ✨ Detailed Features
+## ✨ Key Features & Implementation
 
-This website is designed with several interactive and structural features to enhance user experience.
+This website has been upgraded from a basic HTML structure to a fully responsive, styled, and interactive experience.
 
-### 1. Interactivity & Media
+### 1. Responsive & Visual Design (CSS3)
+* **Mobile-First Approach:** The site is designed primarily for mobile devices and scales up for desktops using CSS Media Queries (`@media (max-width: 768px)`).
+* **Advanced Layouts:**
+    * **CSS Grid:** Used in the **About Section** to create a dynamic "bento-style" photo gallery (1 large image, 2 stacked small images) and for the **Project Gallery** layout.
+    * **CSS Flexbox:** Used for the main header, navigation alignment, and centering content in the Hero section.
+* **Consistent Branding:** Utilization of **CSS Variables** (`--primary-color`, `--accent-color`, `--font-main`) ensures consistent coloring and typography throughout the site.
+* **Responsive Images:** All images utilize `object-fit: cover` and relative widths to ensure they scale perfectly within their containers without distortion.
 
-* **Background Music Player:**
-    * **Global Controls:** A play/pause button (`⏸`/`▶`) located in the main header, allowing users to control music from any section of the site.
-    * **Collapsible Playlist:** A toggleable playlist section on the *Home* page to save space.
-    * **Song Selection:** Users can select specific tracks from two categories (*Relaxing* & *Adventurous*) to play.
-    * **Implementation:** Built using the HTML5 `<audio>` tag and controlled with JavaScript event listeners (`getElementById`, `addEventListener`).
+### 2. Navigation & Interactivity (JavaScript)
+* **Hamburger Menu (Mobile):**
+    * On smaller screens, the navigation links collapse into a slide-in drawer menu to save screen space.
+    * Controlled via a JavaScript toggle function that adds/removes an `.active` class.
+* **Background Music Widget:**
+    * **Global Controls:** A play/pause button (`▶`/`⏸`) located in the header.
+    * **Playlist Dropdown:** A toggleable UI allowing users to choose between "Relaxing" and "Adventurous" tracks.
+    * **Logic:** Built with Vanilla JS to handle audio states and prevent autoplay blocking issues.
+* **Functional Contact Form:**
+    * Includes frontend validation and a JavaScript-handled submission simulation that resets the form and shows a success message without reloading the page.
 
-### 2. Navigation & UI
-
-* **Dual Sticky Navigation System:**
-    * **Main Header:** The top container (with name and music controls) uses `position: sticky` to always stay in view.
-    * **Navigation Menu:** The `<nav>` bar below it also uses `position: sticky`, ensuring links to sections (Home, About, etc.) are always accessible while scrolling.
-* **Functional Contact Form (Client-Side):**
-    * **HTML5 Validation:** Uses the `required` attribute on Name, Email, and Message inputs to ensure data is filled out.
-    * **Submission Simulation:** Uses JavaScript (`e.preventDefault()`) to handle the submit event. This displays a "Message sent successfully!" status and automatically resets the form without a page reload.
-
-### 3. Structure & Content
-
-* **Flexible Project Gallery:**
-    * Uses CSS Flexbox (`display: flex`, `flex-wrap: wrap`, `flex: 1 1 300px`) to create an adaptive project card layout.
-    * Separates projects into "Projects Done" and "Future Projects" to manage expectations.
-* **Semantic HTML Structure:**
-    * Extensive use of semantic tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<figure>`, `<footer>`) to improve SEO and screen reader accessibility.
+### 3. Accessibility (A11y)
+* **Semantic HTML:** Proper use of `<header>`, `<nav>`, `<main>`, `<article>`, and `<footer>` for screen reader optimization.
+* **ARIA Attributes:** Added `aria-label` to icon-only buttons (like the Music and Hamburger buttons) to describe their function to non-visual users.
+* **Screen Reader Utilities:** Implementation of a `.sr-only` class to provide labels for form elements (like the Language dropdown) without cluttering the visual design.
 
 ---
 
 ## 🛠️ Technology Stack
 
-Each technology was chosen for its specific role in building this website:
-
 * **HTML5 (HyperText Markup Language)**
-    * **Role:** The primary skeleton and structure of the site.
-    * **Details:** Used to structure all content. Specific HTML5 features include *meta tags* (`description`, `keywords`) for SEO, the `<audio>` tag for the music player, and `required` attributes for form validation.
+    * **Role:** Semantic structure and content organization.
+    * **Key Features:** Semantic tags, `<audio>` elements, and accessibility attributes (`aria-label`, `role`).
+
 * **CSS3 (Cascading Style Sheets)**
-    * **Role:** Designing and providing the visual appearance of the site.
-    * **Details:** Currently, styling is implemented using **Inline CSS** (`style="..."` attributes directly in the HTML tags). This is used to manage layout (Flexbox), colors, fonts, padding, margins, and the `backdrop-filter: blur()` effect.
+    * **Role:** Visual styling and responsive layout.
+    * **Key Features:** **External CSS** file (`index.css`), CSS Grid, Flexbox, CSS Variables (`:root`), Transitions/Animations, and Media Queries for responsive breakpoints.
+
 * **JavaScript (Vanilla JS - ES6+)**
-    * **Role:** Providing interactivity and functionality (the "brain" of the site).
-    * **Details:** Vanilla JavaScript (no libraries) is used to:
-        * Control the `play()`, `pause()`, and `player.src` logic for the music player.
-        * Handle click events on the music button and playlist.
-        * Manage the submit event for the contact form.
-        * Perform simple DOM manipulation (e.g., changing button `textContent` and status message `display`).
+    * **Role:** Interactive functionality.
+    * **Key Features:** DOM Manipulation (`classList.toggle`), Event Listeners, and Audio API control. No external frameworks were used.
 
 ---
 
@@ -83,8 +80,8 @@ You can run a copy of this project on your local machine for testing or developm
     cd milestone-1-mrafiasyifaa
     ```
 3.  **Open the `index.html` File**
-    * Simply double-click the `index.html` file in your file explorer, or right-click and select "Open with..." your browser of choice.
-    * No server or dependencies need to be installed.
+    * Simply double-click the `index.html` file.
+    * No server or dependencies needed.
 
 ---
 
@@ -92,10 +89,9 @@ You can run a copy of this project on your local machine for testing or developm
 
 This website is an evolving project. Here are some features planned for future updates:
 
-* **Migration to External CSS:** Move all inline CSS styles into an external `style.css` file for a cleaner, more maintainable codebase and better caching performance.
-* **Responsive Design (Mobile-First):** Add CSS Media Queries to make the site look and function perfectly on mobile devices and tablets, not just desktops.
-* **Language Switch Functionality:** Enable the "English/Bahasa Indonesia" dropdown button to actually change the text content on the site.
-* **Project Detail Pages:** Make the "Learn more about this project →" links functional, leading to new pages dedicated to each project's case study, tech stack, and challenges.
-* **Downloadable CV:** Add a button/link to allow visitors to download a PDF version of my professional resume.
+* **Language Switch Functionality:** Enable the "English/Bahasa Indonesia" dropdown button to dynamically change the text content.
+* **Dark Mode Toggle:** Add a switch to toggle between light and dark themes using CSS variables.
+* **Project Detail Pages:** Create dedicated pages for each project case study.
+* **Backend Integration:** Connect the contact form to a real email service (e.g., EmailJS or a Node.js backend).
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/KTVBmApB)
