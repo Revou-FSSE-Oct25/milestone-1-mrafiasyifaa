@@ -123,25 +123,6 @@ img{
     background: transparent;
 }
 
-.musicBtn{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    background: transparent;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-}
-
-.musicBtn:hover{
-    background: var(--accent-color);
-    color: #fff;
-    border-color: var(--accent-color);
-}
-
 /* --------------------- AKHIR HEADER --------------------*/
 /* --------------------- BAGIAN MAIN --------------------*/
 .hero-section{
@@ -208,66 +189,6 @@ img{
 .bold-accent{
     color: var(--primary-color);
     font-weight: 700;
-}
-
-.music-widget{
-    margin-top: 20px;
-    width: 100%;
-    max-width: 600px;
-}
-
-.music-invite{
-    margin-bottom: 15px;
-    color: #666;
-    font-size: 1rem;
-}
-
-.playlist-toggle{
-    background: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 500;
-    transition: background 0.2s;
-}
-
-.playlist-toggle:hover{
-    background: #e9ecef;
-}
-
-.playlist-content{
-    display: none;
-
-    background: rgba(255,255,255, 1);
-    border: 1px solid #ddd;
-    border-top: none;
-    border-radius: 0 0 8px 8px;
-    margin-top: -2px;
-    
-    grid-template-columns: 1fr 1fr;
-}
-
-.playlist-column h3{
-    font-size: 1rem;
-    color: var(--primary-color);
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-}
-
-.playlist-column span{
-    cursor: pointer;
-    color: var(--accent-color);
-    font-size: 1rem;
-    transition: 0.2s;
-}
-
-.playlist-column span:hover{
-    text-decoration: underline;
-    opacity: 0.5;
-
 }
 
 /* --------------------- AKHIR HERO SECTION --------------------*/
