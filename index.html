@@ -45,8 +45,6 @@
                 <option value="en">English</option>
                 <option value="id">Bahasa Indonesia</option>
             </select>
-    
-            <button id="musicBtn" class="musicBtn" aria-label="Toggle background music">▶</button>
         </div>
     </header>
 
@@ -72,36 +70,6 @@
                 An experienced <span class="bold-accent">backend developer</span> who strives to bridge <br>
                 real-world problems with innovative and reliable software solutions.
             </p>
-        </div>
-
-        <!-- Musik -->
-        <div class="music-widget">
-            <p class="music-invite">
-                While we're getting to know each other, why don't we listen to state-of-the-art music? 🎵
-            </p>
-
-        <div id="playlistToggle" class="playlist-toggle">
-            <span>Select Playlist</span>
-            <span id="playlistArrow">▼</span>
-        </div>
-            
-        <div id="playlistContent" class="playlist-content">    
-            <div class="playlist-column">
-                <h3>Relaxing 🎧</h3>
-                <span onclick="playMusic('assets/audios/relaxing_1.mp3')">Silence's Treasure</span>
-                <span onclick="playMusic('assets/audios/relaxing_2.mp3')">Glimmer of Dawn</span>
-                <span onclick="playMusic('assets/audios/relaxing_3.mp3')">Seed of Purity</span>
-            </div>
-
-            <div class="playlist-column">
-                <h3>Adventurous ⚡</h3>
-                <span onclick="playMusic('assets/audios/adventurous_1.mp3')">Interlude Adventure</span>
-                <span onclick="playMusic('assets/audios/adventurous_2.mp3')">Where Glory Shines</span>
-                <span onclick="playMusic('assets/audios/adventurous_3.mp3')">Moonlit Solitude</span>
-            </div>
-
-            <audio id="musicPlayer" style="display:none;"></audio>
-            </div>
         </div>
     </section>
 
@@ -276,34 +244,6 @@
             });
         }
 
-        const player = document.getElementById('musicPlayer');
-        const musicBtn = document.getElementById('musicBtn');
-        let isPlaying = false;
-
-        if (player) {
-            player.src = 'assets/audios/relaxing_1.mp3';
-        }
-
-        if (musicBtn && player) {
-            musicBtn.addEventListener('click', () => {
-                if (player.paused) {
-                    player.play()
-                        .then(() => {
-                            musicBtn.textContent = '⏸';
-                            isPlaying = true;
-                        })
-                        .catch(err => {
-                            console.log('Playback error:', err);
-                            alert("Browser memblokir autoplay. Silakan interaksi dengan halaman dulu.");
-                        });
-                } else {
-                    player.pause();
-                    musicBtn.textContent = '▶';
-                    isPlaying = false;
-                }
-            });
-        }
-
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
         const navLinks = document.querySelectorAll('.nav-link');
@@ -328,38 +268,6 @@
                 }
             });
         }
-
-
-        const playlistToggle = document.getElementById('playlistToggle');
-        
-        function togglePlaylistAction() {
-            const content = document.getElementById('playlistContent');
-            const arrow = document.getElementById('playlistArrow');
-
-            if (content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'grid';
-                arrow.textContent = '▲';
-            } else {
-                content.style.display = 'none';
-                arrow.textContent = '▼';
-            }
-        }
-
-        if (playlistToggle) {
-            playlistToggle.addEventListener('click', togglePlaylistAction);
-        }
-
-        window.playMusic = function(src) {
-            if(!player) return;
-            
-            player.src = src;
-            player.play()
-                .then(() => {
-                    if(musicBtn) musicBtn.textContent = '⏸';
-                    isPlaying = true;
-                })
-                .catch(err => console.log('Error playing:', err));
-        };
     });
 
 </script>
