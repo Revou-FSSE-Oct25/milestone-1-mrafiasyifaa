@@ -778,9 +778,25 @@ body.dark-mode .tech-marquee {
     }
 }
 
-@media (min-width: 768px) {
-    .marquee-content span {
+@media (max-width: 480px) {
+    
+    .hero-text h1 {
+        font-size: 1.8rem; 
+    }
+
+    .main-header {
+        padding: 10px 15px;
+    }
+
+    .about-image-large {
+        height: 300px;
+    }
+    
+    .about-image-small .image-wrapper {
+        height: 180px;
+    }
+
+    .header-left .fullname {
         font-size: 1.1rem;
-        /* Desktop: Lebih besar */
     }
 }
